@@ -8,16 +8,19 @@ import {
   S3_READ_URL_PREFIX,
   S3_REGION,
   S3_VIDEO_KEY_PREFIX,
+  S3_ENDPOINT,
+  S3_BUCKET_URL,
 } from './config';
 import { S3SignedUploadResult } from './types';
 
-const BUCKET_URL = `https://${S3_BUCKET}.s3.amazonaws.com`;
+const BUCKET_URL = S3_BUCKET_URL || `https://${S3_BUCKET}.s3.amazonaws.com`;
 const ImageContentType = 'image/png';
 const VideoContentType = 'video/mp4';
 
 const s3 = new aws.S3({
   region: S3_REGION,
   signatureVersion: 'v4',
+  endpoint: S3_ENDPOINT,
 });
 
 interface GetUploadURLParams {

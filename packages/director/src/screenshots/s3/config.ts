@@ -4,3 +4,5 @@ export const S3_ACL = process.env.S3_ACL || 'public-read';
 export const S3_READ_URL_PREFIX = process.env.S3_READ_URL_PREFIX || undefined;
 export const S3_IMAGE_KEY_PREFIX = process.env.S3_IMAGE_KEY_PREFIX || undefined;
 export const S3_VIDEO_KEY_PREFIX = process.env.S3_VIDEO_KEY_PREFIX || undefined;
+export const S3_ENDPOINT = process.env.S3_ENDPOINT || undefined;
+export const S3_BUCKET_URL = process.env.S3_BUCKET_URL || undefined;
