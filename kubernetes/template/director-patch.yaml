@@ -1,0 +1,10 @@
+---
+- op: replace
+  path: /spec/rules/0/host
+  value: director.localtest.me
+- op: replace
+  path: /spec/tls/0/hosts/0
+  value: director.localtest.me
+- op: replace
+  path: /spec/tls/0/secretName
+  value: director.localtest.me-tls

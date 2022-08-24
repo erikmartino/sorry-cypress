@@ -5,10 +5,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - sc-dashboard.byo.one
-      secretName: sc-dashboard.byo.one-tls
+      - dashboard.example.com
+      secretName: dashboard.example.com-tls
   rules:
-  - host: sc-dashboard.byo.one
+  - host: dashboard.example.com
     http:
       paths:
       - path: /

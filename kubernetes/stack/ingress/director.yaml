@@ -5,10 +5,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - sc-director.byo.one
-      secretName: sc-director.byo.one-tls
+      - director.example.com
+      secretName: director.example.com-tls
   rules:
-  - host: sc-director.byo.one
+  - host: director.example.com
     http:
       paths:
       - path: /

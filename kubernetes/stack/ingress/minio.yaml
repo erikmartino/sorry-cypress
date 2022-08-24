@@ -5,10 +5,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - sc-minio.byo.one
-      secretName: sc-minio.byo.one-tls
+      - minio.example.com
+      secretName: minio.example.com-tls
   rules:
-  - host: sc-minio.byo.one
+  - host: minio.example.com
     http:
       paths:
       - path: /

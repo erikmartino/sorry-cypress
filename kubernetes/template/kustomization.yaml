@@ -2,15 +2,23 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: cyp
 resources:
-  - ../full-stack
-patchesStrategicMerge: 
-- ingress-class.yaml
+  - ../stack
 patches:
 - path: dashboard-patch.yaml
   target:
     kind: Ingress
     name: dashboard
+- path: director-patch.yaml
+  target:
+    kind: Ingress
+    name: director
 - path: minio-patch.yaml
   target:
     kind: Ingress
     name: minio
+- target:
+    kind: Ingress
+  path: ingress-class.yaml
+- target:
+    kind: StatefulSet
+  path: storage-class.yaml
