@@ -2,8 +2,6 @@ name: Lint and test
 
 on:
   push:
-    tags-ignore:
-      - v*
 
 jobs:
   build:
@@ -31,8 +29,20 @@ jobs:
       - name: Run lint
         run: yarn lint
 
+      - name: Type check director
+        run: yarn workspace @sorry-cypress/director build:types
+
+      - name: Type check api
+        run: yarn workspace @sorry-cypress/api build:types
+
+      - name: Type check dashboard
+        run: yarn workspace @sorry-cypress/dashboard type-check
+
       - name: Build common package
         run: yarn workspace @sorry-cypress/common build
+
+      - name: Build logger package
+        run: yarn workspace @sorry-cypress/logger build
 
       - name: Run unit tests
         run: yarn test

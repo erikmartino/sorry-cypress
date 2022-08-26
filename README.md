@@ -8,29 +8,21 @@
   <img width="830" alt="banner dark" src="https://user-images.githubusercontent.com/1637928/147379205-2fe4fb9d-49e6-4a2b-917b-2a28973d2a3a.png">
 </p>
 
-<div>An open-source cypress dashboard</div>
+<div>An open-source alternative to cypress dashboard</div>
 </div>
 
 <br />
 <p align="center">
   <a href="https://sorry-cypress.dev">https://sorry-cypress.dev</a> 
  | 
-  <a href="https://currents.dev?utm_source=github_readme">https://currents.dev</a>
+  <a href="https://currents.dev/?utm_source=github_readme">https://currents.dev</a>
 </p>
 
-**Sorry-cypress** is an open-source, free cypress tests dashboard that unlocks unlimited parallelization, test recordings, integration with GitHub, Slack and more.
+**[Sorry Cypress](https://sorry-cypress.dev)** is an open-source, free alternative to cypress dashboard that unlocks unlimited parallelization, test recordings, integration with GitHub, Slack and more.
 
-**Currents.dev** - is a paid version of sorry-cypress with additional [features](https://currents.notion.site/Features-Comparison-83229899965147eab011aba2a2fcd421), enhanced security and performance.
+**[Currents.dev](https://currents.dev/?utm_source=github_readme)** - is a hosted cloud service the companies around the globe use to scale up their Cypress tests suite without breaking the bank. This is an enhanced version of Sorry Cypress with a better security, performance and integrations support.
 
----
 
-[![StandWithUkraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
-
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine/)
-
-### 🇷🇺 [Обращение к гражданам России](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/ToRussianPeople.md)
-
----
 
 ## Table of contents
 
@@ -147,6 +139,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/pitthecat"><img src="https://avatars.githubusercontent.com/u/28391645?v=4?s=100" width="100px;" alt=""/><br /><sub><b>pitthecat</b></sub></a><br /><a href="#infra-pitthecat" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     <td align="center"><a href="https://github.com/nijine"><img src="https://avatars.githubusercontent.com/u/37587636?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dmitriy Loshakov</b></sub></a><br /><a href="https://github.com/sorry-cypress/sorry-cypress/commits?author=nijine" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Hackatosh"><img src="https://avatars.githubusercontent.com/u/37976573?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Edouard Benauw</b></sub></a><br /><a href="https://github.com/sorry-cypress/sorry-cypress/commits?author=Hackatosh" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/joaoduartepinto"><img src="https://avatars.githubusercontent.com/u/82733395?v=4?s=100" width="100px;" alt=""/><br /><sub><b>joaoduartepinto</b></sub></a><br /><a href="https://github.com/sorry-cypress/sorry-cypress/commits?author=joaoduartepinto" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/alyssa-glean"><img src="https://avatars.githubusercontent.com/u/57534485?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alyssa</b></sub></a><br /><a href="https://github.com/sorry-cypress/sorry-cypress/commits?author=alyssa-glean" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/bjartur20"><img src="https://avatars.githubusercontent.com/u/1508187?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bjartur Þórhallsson</b></sub></a><br /><a href="https://github.com/sorry-cypress/sorry-cypress/commits?author=bjartur20" title="Code">💻</a></td>
+    <td align="center"><a href="http://matteovivona.it"><img src="https://avatars.githubusercontent.com/u/6388707?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matteo Vivona</b></sub></a><br /><a href="https://github.com/sorry-cypress/sorry-cypress/commits?author=tehKapa" title="Code">💻</a></td>
   </tr>
 </table>
 

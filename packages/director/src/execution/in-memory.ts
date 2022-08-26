@@ -32,6 +32,7 @@ import {
   getClaimedSpecs,
   getFirstUnclaimedSpec,
   getNewSpecsInGroup,
+  getRemoteOrigin,
   getSpecsForGroup,
 } from './utils';
 
@@ -102,6 +103,8 @@ const createRun: ExecutionDriver['createRun'] = async (
     );
   }
 
+  params.commit.remoteOrigin = getRemoteOrigin(params.commit.remoteOrigin);
+
   // @ts-ignore
   runs[runId] = {
     runId,
@@ -159,7 +162,7 @@ const getNextTask: ExecutionDriver['getNextTask'] = async ({
   return {
     projectId: runs[runId].meta.projectId,
     instance: unclaimedSpec,
-    claimedInstances: getClaimedSpecs(runs[runId], groupId).length + 1,
+    claimedInstances: getClaimedSpecs(runs[runId], groupId).length,
     totalInstances: getSpecsForGroup(runs[runId], groupId).length,
   };
 };
