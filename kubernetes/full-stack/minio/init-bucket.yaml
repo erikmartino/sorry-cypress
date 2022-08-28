@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: minio-init-bucket
+  labels:
+    app: minio
+spec:
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+      - name: post-init
+        image: minio/mc
+        envFrom:
+        - secretRef:
+            name: minio-access-keys
+        command:
+          - sh
+          - -c
+          - |
+            while ! mc config host add local http://minio:9000 ${MINIO_ACCESS_KEY} ${MINIO_SECRET_KEY}; do sleep 3; done;
+            set -x;
+            mc ls local/sorry-cypress && exit 0
+            mc mb local/sorry-cypress && 
+            mc policy set download local/sorry-cypress &&
+            mc policy set public local/sorry-cypress

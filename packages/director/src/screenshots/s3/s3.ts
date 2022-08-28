@@ -6,6 +6,7 @@ import {
   S3_BUCKET,
   S3_IMAGE_KEY_PREFIX,
   S3_READ_URL_PREFIX,
+  S3_API_ENDPOINT,
   S3_REGION,
   S3_VIDEO_KEY_PREFIX,
 } from './config';

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: director
+  labels:
+    app: director
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: director
+  template:
+    metadata:
+      labels:
+        app: director
+    spec:
+      containers:
+      - name: sorry-cypress-director
+        image: agoldis/sorry-cypress-director
+        ports:
+        - containerPort: 1234
+        envFrom:
+        - secretRef:
+            name: minio-access-keys
+        - configMapRef:
+            name: director-env
