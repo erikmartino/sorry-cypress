@@ -4,5 +4,6 @@ resources:
 - statefulset.yaml
 - service.yaml
 - ingress.yaml
+- ingress-dashboard.yaml
 - init-bucket.yaml
 - root-credentials.yaml

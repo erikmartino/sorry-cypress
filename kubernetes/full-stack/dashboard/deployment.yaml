@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sorry-cypress-dashboard
-        image: agoldis/sorry-cypress-dashboard:latest
+        image: agoldis/sorry-cypress-dashboard
         ports:
         - containerPort: 8080
         envFrom:
