@@ -3,6 +3,10 @@ kind: Ingress
 metadata:
   name: director
 spec:
+  tls:
+    - hosts:
+      - sc-director.byo.one
+      secretName: sc-director.byo.one-tls
   rules:
   - host: sc-director.byo.one
     http:

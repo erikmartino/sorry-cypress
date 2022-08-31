@@ -1,10 +1,10 @@
 ---
 - op: replace
   path: /spec/rules/0/host
-  value: minio.localtest.me
+  value: dashboard.localtest.me
 - op: replace
   path: /spec/tls/0/hosts/0
-  value: minio.localtest.me
+  value: dashboard.localtest.me
 - op: replace
   path: /spec/tls/0/secretName
-  value: minio.localtest.me-tls
+  value: dashboard.localtest.me-tls

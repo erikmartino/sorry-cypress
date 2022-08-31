@@ -3,6 +3,10 @@ kind: Ingress
 metadata:
   name: dashboard
 spec:
+  tls:
+    - hosts:
+      - sc-dashboard.byo.one
+      secretName: sc-dashboard.byo.one-tls
   rules:
   - host: sc-dashboard.byo.one
     http:
@@ -14,3 +18,10 @@ spec:
             name: dashboard
             port:
               number: 8080
+      - path: /graphql
+        pathType: Prefix
+        backend:
+          service:
+            name: api
+            port:
+              number: 4000
