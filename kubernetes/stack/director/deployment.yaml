@@ -15,12 +15,12 @@ spec:
         app: director
     spec:
       containers:
-      - name: sorry-cypress-director
-        image: agoldis/sorry-cypress-director
-        ports:
-        - containerPort: 1234
-        envFrom:
-        - secretRef:
-            name: minio-access-keys
-        - configMapRef:
-            name: director-env
+        - name: sorry-cypress-director
+          image: agoldis/sorry-cypress-director
+          ports:
+            - containerPort: 1234
+          envFrom:
+            - secretRef:
+                name: minio-access-keys
+            - configMapRef:
+                name: director

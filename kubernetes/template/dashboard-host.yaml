@@ -1,0 +1,15 @@
+source:
+  kind: ConfigMap
+  name: values
+  fieldPath: data.DASHBOARD_URL
+  options:
+    delimiter: '://'
+    index: 1
+targets:
+  - select:
+      kind: Ingress
+      name: dashboard
+    fieldPaths:
+      - spec.rules.0.host
+      - spec.tls.0.hosts.0
+      - spec.tls.0.secretName

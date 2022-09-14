@@ -1,0 +1,20 @@
+source:
+  kind: ConfigMap
+  name: values
+  fieldPath: data.MINIO_URL
+  options:
+    delimiter: '://'
+    index: 1
+targets:
+  - select:
+      kind: Ingress
+      name: minio
+    fieldPaths:
+      - spec.rules.0.host
+      - spec.tls.0.hosts.0
+      - spec.tls.0.secretName
+  - select:
+      kind: ConfigMap
+      name: director
+    fieldPaths:
+      - data.MINIO_ENDPOINT

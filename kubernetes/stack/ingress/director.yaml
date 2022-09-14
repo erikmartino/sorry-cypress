@@ -5,16 +5,16 @@ metadata:
 spec:
   tls:
     - hosts:
-      - director.example.com
+        - director.example.com
       secretName: director.example.com-tls
   rules:
-  - host: director.example.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: director
-            port:
-              number: 1234
+    - host: director.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: director
+                port:
+                  number: 1234

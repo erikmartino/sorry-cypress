@@ -1,24 +1,26 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: cyp
 resources:
   - ../stack
+configMapGenerator:
+  - name: values
+    envs:
+      - values.env
 patches:
-- path: dashboard-patch.yaml
-  target:
-    kind: Ingress
-    name: dashboard
-- path: director-patch.yaml
-  target:
-    kind: Ingress
-    name: director
-- path: minio-patch.yaml
-  target:
-    kind: Ingress
-    name: minio
-- target:
-    kind: Ingress
-  path: ingress-class.yaml
-- target:
-    kind: StatefulSet
-  path: storage-class.yaml
+  - path: cert-patch.yaml
+    target:
+      kind: Ingress
+replacements:
+  - path: dashboard-host.yaml
+  - path: minio-host.yaml
+  - path: director-host.yaml
+
+  - source: { kind: ConfigMap, name: values, fieldPath: data.DASHBOARD_URL }
+    targets:
+      - select: { kind: ConfigMap, name: director }
+        fieldPaths: [data.DASHBOARD_URL]
+
+  - source: { kind: ConfigMap, name: values, fieldPath: data.MINIO_URL }
+    targets:
+      - select: { kind: ConfigMap, name: director }
+        fieldPaths: [data.MINIO_URL]

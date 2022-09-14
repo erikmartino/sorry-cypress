@@ -5,16 +5,16 @@ metadata:
 spec:
   tls:
     - hosts:
-      - minio.example.com
+        - minio.example.com
       secretName: minio.example.com-tls
   rules:
-  - host: minio.example.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: minio
-            port:
-              number: 9000
+    - host: minio.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: minio
+                port:
+                  number: 9000
