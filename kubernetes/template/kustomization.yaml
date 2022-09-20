@@ -10,17 +10,14 @@ patches:
   - path: cert-patch.yaml
     target:
       kind: Ingress
+  - path: minio-https.yaml
+    target:
+      kind: ConfigMap
 replacements:
   - path: dashboard-host.yaml
   - path: minio-host.yaml
   - path: director-host.yaml
-
   - source: { kind: ConfigMap, name: values, fieldPath: data.DASHBOARD_URL }
     targets:
       - select: { kind: ConfigMap, name: director }
         fieldPaths: [data.DASHBOARD_URL]
-
-  - source: { kind: ConfigMap, name: values, fieldPath: data.MINIO_URL }
-    targets:
-      - select: { kind: ConfigMap, name: director }
-        fieldPaths: [data.MINIO_URL]

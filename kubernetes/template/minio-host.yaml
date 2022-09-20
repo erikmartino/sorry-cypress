@@ -1,10 +1,7 @@
 source:
   kind: ConfigMap
   name: values
-  fieldPath: data.MINIO_URL
-  options:
-    delimiter: '://'
-    index: 1
+  fieldPath: data.MINIO_HOST
 targets:
   - select:
       kind: Ingress

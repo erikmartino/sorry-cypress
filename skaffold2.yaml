@@ -1,0 +1,24 @@
+apiVersion: skaffold/v2beta29
+kind: Config
+metadata:
+  name: sorry-cypress
+build:
+  artifacts:
+    - image: agoldis/sorry-cypress-api
+      context: packages/api
+      docker:
+        dockerfile: Dockerfile
+    - image: agoldis/sorry-cypress-dashboard
+      context: packages/dashboard
+      docker:
+        dockerfile: Dockerfile
+    - image: agoldis/sorry-cypress-director
+      context: packages/director
+      docker:
+        dockerfile: Dockerfile
+profiles:
+  - name: kind
+    deploy:
+      kustomize:
+        paths:
+          - kubernetes/kind

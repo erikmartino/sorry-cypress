@@ -1,0 +1,10 @@
+apiVersion: skaffold/v2beta29
+kind: Config
+metadata:
+  name: sorry-cypress
+build:
+  artifacts:
+    - image: agoldis/sorry-cypress-director
+      context: packages/api
+      buildpacks:
+        builder: gcr.io/buildpacks/builder:v1
