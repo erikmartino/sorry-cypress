@@ -10,7 +10,7 @@ export const MINIO_PORT = process.env.MINIO_PORT || '9000';
 export const MINIO_USESSL = process.env.MINIO_USESSL || 'false';
 export const MINIO_URL =
   process.env.MINIO_URL || 'https://storage.yourdomain.com';
-export const BUCKET_URL = `${MINIO_URL}:${MINIO_PORT}/${MINIO_BUCKET}`;
+export const BUCKET_URL = process.env.BUCKET_URL || `${MINIO_URL}:${MINIO_PORT}/${MINIO_BUCKET}`;
 
 export const UPLOAD_EXPIRY_SECONDS = Number(
   process.env.UPLOAD_EXPIRY_SECONDS || '90'
